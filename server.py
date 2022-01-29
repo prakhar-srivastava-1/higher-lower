@@ -1,6 +1,9 @@
 from flask import Flask
+import random
 
 app = Flask(__name__)
+
+CHOSEN_NUMBER = random.randint(0, 9)
 
 
 @app.route("/")
