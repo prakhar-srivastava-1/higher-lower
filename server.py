@@ -9,5 +9,10 @@ def index():
            "<img src='https://media.giphy.com/media/3o7aCSPqXE5C6T8tBC/giphy.gif'>"
 
 
+@app.route("/<int:guess>")
+def guess_number(guess):
+    return f"{guess}"
+
+
 if __name__ == "__main__":
     app.run(debug=True)
