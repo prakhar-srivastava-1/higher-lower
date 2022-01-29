@@ -6,6 +6,7 @@ app = Flask(__name__)
 CHOSEN_NUMBER = random.randint(0, 9)
 print(CHOSEN_NUMBER)
 
+
 @app.route("/")
 def index():
     return "<h1>Guess a number between 0 and 9!</h1>" \
@@ -21,7 +22,7 @@ def guess_number(guess):
         return f"<h1 color='red'>{guess} is too high</h1>" \
                "<img src='https://media.giphy.com/media/3o6ZtaO9BZHcOjmErm/giphy.gif'>"
     return f"<h1 text-color='green'>You found me!</h1>" \
-           f"<img src='https://media.giphy.com/media/4T7e4DmcrP9du/giphy.gif'>" \
+           f"<img src='https://media.giphy.com/media/4T7e4DmcrP9du/giphy.gif'>"
 
 
 if __name__ == "__main__":
